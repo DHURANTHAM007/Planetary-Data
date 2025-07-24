@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Space Mono', monospace;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+.planet-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    background: rgba(20, 20, 40, 0.7);
+}
+
+.planet-table th {
+    background: rgba(60, 60, 100, 0.8);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.planet-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    vertical-align: middle;
+}
+
+.planet-table tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.planet-table tr:last-child td {
+    border-bottom: none;
+}
+
+.planet-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.planet-cell {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    letter-spacing: 2px;
+}
+
+.glow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .planet-table {
+        font-size: 0.85rem;
+    }
+    
+    .planet-table th, .planet-table td {
+        padding: 8px;
+    }
+    
+    .responsive-container {
+        overflow-x: auto;
+    }
+    
+    .planet-img {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+    }
+}
