@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Planets Data</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4 md:p-8">
+    <div id="stars-container"></div>
+    
+    <header class="text-center mb-8 mt-4">
+        <h1 class="text-3xl md:text-5xl font-bold title mb-2">Planetary Data</h1>
+        <p class="text-blue-200 opacity-80">Explore the celestial bodies of our solar system</p>
+    </header>
+    
+    <div class="responsive-container max-w-6xl mx-auto">
+        <table class="planet-table w-full">
+            <thead>
+                <tr>
+                    <th class="text-left">Planet</th>
+                    <th class="text-left">Distance from Sun</th>
+                    <th class="text-left">Mass</th>
+                    <th class="text-left">Diameter</th>
+                    <th class="text-left">Orbital Period</th>
+                    <th class="text-left">Rotation Period</th>
+                    <th class="text-left">Moons</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#c6c6c6"></circle>
+                                <circle cx="30" cy="30" r="10" fill="#a0a0a0" opacity="0.7"></circle>
+                                <circle cx="70" cy="40" r="15" fill="#a0a0a0" opacity="0.5"></circle>
+                                <circle cx="40" cy="70" r="12" fill="#a0a0a0" opacity="0.6"></circle>
+                                <circle cx="65" cy="65" r="8" fill="#a0a0a0" opacity="0.7"></circle>
+                            </svg>
+                            Mercury
+                        </div>
+                    </td>
+                    <td>57.9 million km</td>
+                    <td>0.330 × 10<sup>24</sup> kg</td>
+                    <td>4,879 km</td>
+                    <td>88 days</td>
+                    <td>59 days</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#e6c073"></circle>
+                                <path d="M20,30 Q50,10 80,30 Q50,50 20,30" fill="#d4a76a" opacity="0.7"></path>
+                                <path d="M20,50 Q50,30 80,50 Q50,70 20,50" fill="#d4a76a" opacity="0.7"></path>
+                                <path d="M20,70 Q50,50 80,70 Q50,90 20,70" fill="#d4a76a" opacity="0.7"></path>
+                            </svg>
+                            Venus
+                        </div>
+                    </td>
+                    <td>108.2 million km</td>
+                    <td>4.87 × 10<sup>24</sup> kg</td>
+                    <td>12,104 km</td>
+                    <td>225 days</td>
+                    <td>243 days</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#1e90ff"></circle>
+                                <path d="M30,30 Q40,20 60,30 T90,30" fill="#228B22"></path>
+                                <path d="M10,40 Q30,35 50,45 T90,40" fill="#228B22"></path>
+                                <path d="M20,60 Q40,50 60,65 T90,60" fill="#228B22"></path>
+                                <circle cx="75" cy="25" r="8" fill="#f5f5f5" opacity="0.8"></circle>
+                            </svg>
+                            Earth
+                        </div>
+                    </td>
+                    <td>149.6 million km</td>
+                    <td>5.97 × 10<sup>24</sup> kg</td>
+                    <td>12,756 km</td>
+                    <td>365.2 days</td>
+                    <td>24 hours</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#ff5733"></circle>
+                                <circle cx="30" cy="30" r="12" fill="#e74c3c" opacity="0.7"></circle>
+                                <circle cx="70" cy="40" r="15" fill="#e74c3c" opacity="0.5"></circle>
+                                <circle cx="40" cy="70" r="10" fill="#e74c3c" opacity="0.6"></circle>
+                                <circle cx="20" cy="50" r="8" fill="#e74c3c" opacity="0.7"></circle>
+                                <circle cx="65" cy="65" r="6" fill="#e74c3c" opacity="0.8"></circle>
+                            </svg>
+                            Mars
+                        </div>
+                    </td>
+                    <td>227.9 million km</td>
+                    <td>0.642 × 10<sup>24</sup> kg</td>
+                    <td>6,792 km</td>
+                    <td>687 days</td>
+                    <td>24.6 hours</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#f9d293"></circle>
+                                <path d="M10,30 Q50,40 90,30" stroke="#e8b971" stroke-width="4" fill="none"></path>
+                                <path d="M10,40 Q50,50 90,40" stroke="#e8b971" stroke-width="3" fill="none"></path>
+                                <path d="M10,50 Q50,60 90,50" stroke="#e8b971" stroke-width="5" fill="none"></path>
+                                <path d="M10,60 Q50,70 90,60" stroke="#e8b971" stroke-width="2" fill="none"></path>
+                                <circle cx="70" cy="30" r="8" fill="#e8b971" opacity="0.7"></circle>
+                            </svg>
+                            Jupiter
+                        </div>
+                    </td>
+                    <td>778.5 million km</td>
+                    <td>1,898 × 10<sup>24</sup> kg</td>
+                    <td>142,984 km</td>
+                    <td>11.9 years</td>
+                    <td>9.9 hours</td>
+                    <td>79</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="#f4e4c4"></circle>
+                                <ellipse cx="50" cy="50" rx="60" ry="15" fill="none" stroke="#e6d2a8" stroke-width="4"></ellipse>
+                                <ellipse cx="50" cy="50" rx="55" ry="10" fill="none" stroke="#e6d2a8" stroke-width="3"></ellipse>
+                                <ellipse cx="50" cy="50" rx="50" ry="5" fill="none" stroke="#e6d2a8" stroke-width="2"></ellipse>
+                            </svg>
+                            Saturn
+                        </div>
+                    </td>
+                    <td>1,432 million km</td>
+                    <td>568 × 10<sup>24</sup> kg</td>
+                    <td>120,536 km</td>
+                    <td>29.5 years</td>
+                    <td>10.7 hours</td>
+                    <td>82</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#b3ffff"></circle>
+                                <ellipse cx="50" cy="50" rx="60" ry="10" fill="none" stroke="#87ceeb" stroke-width="2" transform="rotate(75 50 50)"></ellipse>
+                                <path d="M30,30 Q50,40 70,30" stroke="#87ceeb" stroke-width="3" fill="none"></path>
+                                <path d="M30,70 Q50,60 70,70" stroke="#87ceeb" stroke-width="3" fill="none"></path>
+                            </svg>
+                            Uranus
+                        </div>
+                    </td>
+                    <td>2,867 million km</td>
+                    <td>86.8 × 10<sup>24</sup> kg</td>
+                    <td>51,118 km</td>
+                    <td>84 years</td>
+                    <td>17.2 hours</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="planet-cell">
+                            <svg class="planet-img" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48" fill="#4b70dd"></circle>
+                                <path d="M20,30 Q50,40 80,30" stroke="#324ab2" stroke-width="4" fill="none"></path>
+                                <path d="M20,50 Q50,60 80,50" stroke="#324ab2" stroke-width="5" fill="none"></path>
+                                <path d="M20,70 Q50,80 80,70" stroke="#324ab2" stroke-width="3" fill="none"></path>
+                                <circle cx="65" cy="35" r="10" fill="#324ab2" opacity="0.7"></circle>
+                            </svg>
+                            Neptune
+                        </div>
+                    </td>
+                    <td>4,515 million km</td>
+                    <td>102 × 10<sup>24</sup> kg</td>
+                    <td>49,528 km</td>
+                    <td>165 years</td>
+                    <td>16.1 hours</td>
+                    <td>14</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <footer class="text-center mt-8 mb-4 text-sm text-blue-200 opacity-70">
+        <p>Data sourced from NASA planetary fact sheets</p>
+    </footer>
+    
+    <script>
+        // Create twinkling stars background
+        const starsContainer = document.getElementById('stars-container');
+        const numberOfStars = 150;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 4}s`;
+            
+            starsContainer.appendChild(star);
+        }
+        
+        // Make table headers sortable
+        document.querySelectorAll('th').forEach(header => {
+            header.style.cursor = 'pointer';
+            header.addEventListener('click', () => {
+                const table = header.closest('table');
+                const index = Array.from(header.parentElement.children).indexOf(header);
+                const rows = Array.from(table.querySelectorAll('tbody tr'));
+                const isNumeric = index > 0;
+                
+                rows.sort((a, b) => {
+                    let aValue = a.children[index].innerText;
+                    let bValue = b.children[index].innerText;
+                    
+                    if (isNumeric) {
+                        aValue = parseFloat(aValue.match(/[\\d.]+/)[0]);
+                        bValue = parseFloat(bValue.match(/[\\d.]+/)[0]);
+                    }
+                    
+                    if (aValue < bValue) return -1;
+                    if (aValue > bValue) return 1;
+                    return 0;
+                });
+                
+                const tbody = table.querySelector('tbody');
+                rows.forEach(row => tbody.appendChild(row));
+            });
+        });
+    </script>
+</body>
+</html>
